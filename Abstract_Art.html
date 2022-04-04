@@ -4,47 +4,89 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Abstract Art Competition</title>
+
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        
+        /* Create three equal columns that floats next to each other */
+        .column {
+          float: left;
+          width: 33.33%;
+          padding: 10px;
+          height: 300px; /* Should be removed. Only for demonstration */
+        }
+        
+        /* Clear floats after the columns */
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+        </style>
 </head>
-<body style="width: 100%; background-color: blanchedalmond;" >
-    <h1 style="color: crimson; font-family: Arial, Helvetica, sans-serif;">Abstract Art Competition</h1>
-    <table>
-        <tr>Select Language</Select></tr>
-        <td>Instructions</td>
-        <td>
-            <div style="background-color: bisque; 
-            font-family: Arial, Helvetica, sans-serif;">Instructions</div>    
-        </td>
-        <td>
-            <canvas id="myCanvas" width="400" height="400" style="border:1px solid #968282;"></canvas>
-        </td>
-        <td>
-            <form id="fs-frm" name="file-upload-form" accept-charset="utf-8" action="/test.php" method="post" enctype="multipart/form-data">
+<body style="width: 100%; background-color: rgb(217, 220, 240);" >
+    <h1 style="color: rgb(43, 117, 139); font-family: Arial, Helvetica, sans-serif;">Abstract Art Competition</h1>
+    <div class="row">
+        <div class="column" style="background-color:rgb(217, 220, 240);">
+          <p>
+          <label for="Language"> Language </label>
+          <button id="btnEnglish">English</button>
+          <button id ="btnSpanish">Spanish</button></p>
+          <p>
+          <label for="Shapes">Choose a shape:</label>
+            <select name="shapes" id="shapes">
+              <option value="square">square</option>
+              <option value="circle">circle</option>
+              <option value="line">LIne</option><br>
+            </select><br></p>
+        </div>
+        <div class="column" style="background-color:rgb(217, 220, 240);">
+          <h2>Column 2</h2>
+          <p>Some text..</p>
+          <canvas id="myCanvas" width="400" height="400" style="border:1px solid #080808; background-color: white;"></canvas>
+          <div style="background-color: rgb(14, 119, 138); 
+            font-family: Arial, Helvetica, sans-serif;">Instructions</div>
+        </div>
+        <div class="column" style="background-color:rgb(217, 220, 240);">
+          <h2>Column 3</h2>
+          <p>Some text..</p>
+          <form id="fs-frm" name="file-upload-form" accept-charset="utf-8" action="/test.php" method="post" enctype="multipart/form-data">
     
-                <label for="userName">Username</label><br>
-                <input type="text" name="userName" id="userName" required><br>
+            <label for="userName">Username</label><br>
+            <input type="text" name="userName" id="userName" required><br>
+          
+            <label for="email-address">Email </label><br>
+            <input type="email" name="email" id="email-address" placeholder="email@email.com" required ><br><br>
+          
+            <label for="pwd">Password:</label><br>
+            <input type="password" id="pwd" name="pwd" required ><br>
+          
+            <label for="pwd">Confirm Password:</label><br>
+            <input type="password" id="cnfpwd" name="cnfpwd" required><br>
+          
+            <label for="phone">Mobile No.:</label><br>
+            <input type="tel" id="phone" name="phone" size = "18" placeholder="999-999-999" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" ><br>
+          
+            <label for="upload"> </label><br>
+            <input type="file" name="upload" accept=".png" required><br><br>
+          
+            <input type="submit" value="Submit" id="submit"><br><br>
+            <input type="reset" value="Reset">
               
-                <label for="email-address">Email </label><br>
-                <input type="email" name="email" id="email-address" placeholder="email@email.com" required ><br><br>
-              
-                <label for="pwd">Password:</label><br>
-                <input type="password" id="pwd" name="pwd" required ><br>
-              
-                <label for="pwd">Confirm Password:</label><br>
-                <input type="password" id="cnfpwd" name="cnfpwd" required><br>
-              
-                <label for="phone">Mobile No.:</label><br>
-                <input type="tel" id="phone" name="phone" size = "18" placeholder="999-999-999" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" ><br>
-              
-                <label for="upload"> </label><br>
-                <input type="file" name="upload" accept=".png" required><br><br>
-              
-                <input type="submit" value="Submit" id="submit"><br><br>
-                <input type="reset" value="Reset">
-                  
-              </form>
-        </td>
-    </table>
+          </form>
+        </div>
+      </div>
+        <div>
+            
+        </div><br><br>
+
+        
+            
+       
+            
           
 </body>
 </html>
