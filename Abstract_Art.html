@@ -42,16 +42,98 @@
               <option value="circle">circle</option>
               <option value="line">LIne</option><br>
             </select><br></p>
+            <p>
+                <!-- fill color palette -->
+    <div >
+        <input type="color" id="fillColourPalette" name="fillColourPalette" 
+               value="#e66465">
+        <label for="fillColourPalette">Fill color</label>
+    </div>
+
+    <!-- outline color palette  -->
+    <div >
+      <input type="color" id="outlineColourPalette" name="outlineColourPalette" 
+             value="#e66465">
+      <label for="outlineColourPalette">Outline color</label>
+  </div>
+    
+        <!-- range slider -->
+    <div >
+      <input type="range" id="slider" name="slider"
+             min="0" max="100">
+      <label for="slider">Slider</label>
+    </div>
+
+    <!-- Number field X -->
+    <div >
+      <label for="x">X</label>
+      <input type="number" id="x" name="x"
+             min="0" max="400">
+    </div>
+    
+    <!-- Number field Y -->
+    <div >
+        <label for="y">Y</label>
+        <input type="number" id="y" name="y"
+               min="0" max="400">
+      </div>
+    
+      <!-- Number field line to X -->
+    <div >
+      <label for="lineX">line to X</label>
+      <input type="number" id="lineX" name="lineX"
+             min="0" max="400">
+    </div>
+    
+    <!-- Number field line to Y -->
+    <div >
+      <label for="lineY">line to Y</label>
+      <input type="number" id="lineY" name="lineY"
+             min="0" max="400">
+    </div>
+
+    <!-- Number field to Width -->
+    <div >
+      <label for="width">Width</label>
+      <input type="number" id="width" name="width"
+             min="0" max="400">
+    </div>
+
+    <!-- Number field to Height -->
+    <div >
+      <label for="height">Height</label>
+      <input type="number" id="height" name="height"
+             min="0" max="400">
+    </div>
+    <!-- check box  -->
+    <div>
+      <input type="checkbox" id="linearFill" name="linearFill" value="linear">
+      <label for="linearFill"> Linear Gradient Fill</label><br>
+     </div>
+
+     <!-- a button to draw -->
+    <div >
+      <button id="draw">Draw</button>        
+    </div>
+
+    <!-- a button clear canvas -->
+    <div >
+      <button id="clear">Clear</button>        
+    </div>
+            </p>
         </div>
         <div class="column" style="background-color:rgb(217, 220, 240);">
-          <h2>Column 2</h2>
           <p>Some text..</p>
-          <canvas id="myCanvas" width="400" height="400" style="border:1px solid #080808; background-color: white;"></canvas>
           <div style="background-color: rgb(14, 119, 138); 
             font-family: Arial, Helvetica, sans-serif;">Instructions</div>
+          <canvas id="myCanvas" width="400" height="400" style="border:1px solid #080808; background-color: white;"></canvas>
+          
+        <a id="download" download="myAbstractArt.jpg" href="" onclick="download_img(this);"> Save Art </a>
         </div>
+
+
         <div class="column" style="background-color:rgb(217, 220, 240);">
-          <h2>Column 3</h2>
+
           <p>Some text..</p>
           <form id="fs-frm" name="file-upload-form" accept-charset="utf-8" action="/test.php" method="post" enctype="multipart/form-data">
     
@@ -83,7 +165,7 @@
             
         </div><br><br>
 
-        
+        <script src = "abstractArt.js"> </script>   
             
        
             
