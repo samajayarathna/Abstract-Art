@@ -4,137 +4,129 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abstract Art Competition</title>
+    <link rel="stylesheet" href="abstractArtCCS.css">
+    <title id="title">Abstract Art Competition</title>
 
     <style>
-        * {
-          box-sizing: border-box;
-        }
         
-        /* Create three equal columns that floats next to each other */
-        .column {
-          float: left;
-          width: 33.33%;
-          padding: 10px;
-          height: 300px; /* Should be removed. Only for demonstration */
-        }
-        
-        /* Clear floats after the columns */
-        .row:after {
-          content: "";
-          display: table;
-          clear: both;
-        }
         </style>
 </head>
 <body style="width: 100%; background-color: rgb(217, 220, 240);" >
     <h1 style="color: rgb(43, 117, 139); font-family: Arial, Helvetica, sans-serif;">Abstract Art Competition</h1>
     <div class="row">
-        <div class="column" style="background-color:rgb(217, 220, 240);">
-          <p>
-          <label for="Language"> Language </label>
-          <button id="btnEnglish">English</button>
-          <button id ="btnSpanish">Spanish</button></p>
-          <p>
-          <label for="Shapes">Choose a shape:</label>
+        <div class="column" style="background-color:  rgb(217, 220, 240);">
+          <div>
+            <label for="Language"> Language </label>
+            <button id="btnEnglish">English</button>
+            <button id ="btnSpanish">Spanish</button>
+          </div>
+          <div>
+            <label for="Shapes">Choose a shape:</label>
             <select name="shapes" id="shapes">
               <option value="square">square</option>
               <option value="circle">circle</option>
               <option value="line">LIne</option><br>
-            </select><br></p>
-            <p>
-                <!-- fill color palette -->
-    <div >
-        <input type="color" id="fillColourPalette" name="fillColourPalette" 
-               value="#e66465">
-        <label for="fillColourPalette">Fill color</label>
-    </div>
+            </select><br>
+            </div>
 
-    <!-- outline color palette  -->
-    <div >
-      <input type="color" id="outlineColourPalette" name="outlineColourPalette" 
-             value="#e66465">
-      <label for="outlineColourPalette">Outline color</label>
-  </div>
+            <div>
+                <!-- fill color palette -->
+                <input type="color" id="fillColourPalette" name="fillColourPalette" value="#e66465">
+                <label for="fillColourPalette">Fill color</label>
+            </div>    
+
+        <!-- outline color palette  -->
+            <div >
+                <input type="color" id="outlineColourPalette" name="outlineColourPalette" 
+                value="#e66465">
+                <label for="outlineColourPalette">Outline color</label>
+            </div>
     
         <!-- range slider -->
-    <div >
-      <input type="range" id="slider" name="slider"
-             min="0" max="100">
-      <label for="slider">Slider</label>
-    </div>
+            <div >
+            <input type="range" id="slider" name="slider"
+                    min="0" max="100">
+            <label for="slider">Slider</label>
+            </div>
 
-    <!-- Number field X -->
-    <div >
-      <label for="x">X</label>
-      <input type="number" id="x" name="x"
-             min="0" max="400">
-    </div>
+            <!-- Number field X -->
+            <div >
+            <label for="x">X</label>
+            <input type="number" id="x" name="x"
+                    min="0" max="400">
+            </div>
     
-    <!-- Number field Y -->
-    <div >
-        <label for="y">Y</label>
-        <input type="number" id="y" name="y"
-               min="0" max="400">
-      </div>
+            <!-- Number field Y -->
+            <div >
+                <label for="y">Y</label>
+                <input type="number" id="y" name="y"
+                    min="0" max="400">
+            </div>
     
-      <!-- Number field line to X -->
-    <div >
-      <label for="lineX">line to X</label>
-      <input type="number" id="lineX" name="lineX"
-             min="0" max="400">
-    </div>
+            <!-- Number field line to X -->
+            <div >
+            <label for="lineX">line to X</label>
+            <input type="number" id="lineX" name="lineX"
+                    min="0" max="400">
+            </div>
     
-    <!-- Number field line to Y -->
-    <div >
-      <label for="lineY">line to Y</label>
-      <input type="number" id="lineY" name="lineY"
-             min="0" max="400">
-    </div>
+            <!-- Number field line to Y -->
+            <div >
+            <label for="lineY">line to Y</label>
+            <input type="number" id="lineY" name="lineY"
+                    min="0" max="400">
+            </div>
 
-    <!-- Number field to Width -->
-    <div >
-      <label for="width">Width</label>
-      <input type="number" id="width" name="width"
-             min="0" max="400">
-    </div>
+            <!-- Number field to Width -->
+            <div >
+            <label for="width">Width</label>
+            <input type="number" id="width" name="width"
+                    min="0" max="400">
+            </div>
 
-    <!-- Number field to Height -->
-    <div >
-      <label for="height">Height</label>
-      <input type="number" id="height" name="height"
-             min="0" max="400">
-    </div>
-    <!-- check box  -->
-    <div>
-      <input type="checkbox" id="linearFill" name="linearFill" value="linear">
-      <label for="linearFill"> Linear Gradient Fill</label><br>
-     </div>
+            <!-- Number field to Height -->
+            <div >
+            <label for="height">Height</label>
+            <input type="number" id="height" name="height"
+                    min="0" max="400">
+            </div>
+            <!-- check box  -->
+            <div>
+            <input type="checkbox" id="linearFill" name="linearFill" value="linear">
+            <label for="linearFill"> Linear Gradient Fill</label><br>
+            </div>
 
-     <!-- a button to draw -->
-    <div >
-      <button id="draw">Draw</button>        
-    </div>
+            <!-- a button to draw -->
+            <div >
+            <button id="draw">Draw</button>        
+            </div>
 
-    <!-- a button clear canvas -->
-    <div >
-      <button id="clear">Clear</button>        
-    </div>
-            </p>
+            <!-- a button clear canvas -->
+            <div >
+            <button id="clear">Clear</button>        
+            </div>
         </div>
+
         <div class="column" style="background-color:rgb(217, 220, 240);">
-          <p>Some text..</p>
-          <div style="background-color: rgb(14, 119, 138); 
-            font-family: Arial, Helvetica, sans-serif;">Instructions</div>
-          <canvas id="myCanvas" width="400" height="400" style="border:1px solid #080808; background-color: white;"></canvas>
+            <div id="instructions">
+                <p>
+                Instructions <br>
+                 1. Draw your art by choosing shapes, colours and measurements. <br>
+                    2. Save the Art to your computer. <br> 3. Submit your Art.
+                </p> 
+                <canvas id="myCanvas" width="400" height="400" style="border:1px solid #080808; background-color: white;"></canvas>
+                <a id="download" download="myAbstractArt.jpg" href="" onclick="download_img(this);"> Save Art </a>
+            </div>
+
+            <div>
+               
+            </div>
           
-        <a id="download" download="myAbstractArt.jpg" href="" onclick="download_img(this);"> Save Art </a>
         </div>
 
 
         <div class="column" style="background-color:rgb(217, 220, 240);">
 
-          <p>Some text..</p>
           <form id="fs-frm" name="file-upload-form" accept-charset="utf-8" action="/test.php" method="post" enctype="multipart/form-data">
     
             <label for="userName">Username</label><br>
