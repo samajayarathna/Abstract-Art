@@ -4,7 +4,6 @@ var ctx = canvas.getContext("2d");
 //document.querySelector("#btnEnglish").addEventListener("click", translateToEnglish)
 //document.querySelector("#btnSpanish").addEventListener("click", translateToSpanish)
 document.querySelector("#draw").addEventListener("click", draw);
-//document.querySelector("#download").addEventListener("click", downloadImage(el))
 document.querySelector("#clear").addEventListener("click", clearCanvas);
 document.querySelector("#fillColourPalette").addEventListener("click", fillColourPalette);
 document.querySelector("#outlineColourPalette").addEventListener("click", outlineColourPalette);
@@ -17,6 +16,13 @@ document.querySelector("#width").addEventListener("click", getWidthValue);
 document.querySelector("#height").addEventListener("click", getHeightValue);
 document.querySelector("#shapes").addEventListener("click", myShapes);
 document.querySelector("#linearFill").addEventListener("click", myFill);
+//document.querySelector("#download").addEventListener("click", downloadImage(el))
+document.querySelector("#btnSpanish").addEventListener("click", translateToSpanish)
+document.querySelector("#btnEnglish").addEventListener("click", translateToEnglish);
+
+/*document.getElementById("btnSpanish").addEventListener("click", function() {
+    changeLanguage();
+  });*/
 
 function draw(){  
   let grd = ctx.createLinearGradient(100, 100, 150, 100);
@@ -56,6 +62,18 @@ function draw(){
   }
 }
 
+function translateToSpanish(){
+    document.getElementById("heading").innerHTML = "concurso de arte abstracto";
+    document.getElementById("heading2").innerHTML = "Instrucciones";
+    document.getElementById("instructions").innerHTML = "Dibuja tu arte eligiendo formas, colores y medidas.Guarde el arte en su computadora.Envía tu Arte.";
+}
+
+function translateToEnglish(){
+    document.getElementById("heading").innerHTML = "Abstract Art Competition";
+    document.getElementById("heading2").innerHTML = "Instructions";
+    document.getElementById("instructions").innerHTML = "Draw your art by choosing shapes, colours and measurements.Save the Art to your computer. Submit your Art.";
+}
+
 function clearCanvas(){
   ctx.clearRect(0, 0, 400, 400);
 }
@@ -68,7 +86,7 @@ function clearCanvas(){
 /*function downloadImage(el){
   var image = canvas.toDataURL("image/jpg");
   el.href = image;
-}*/
+} */
 
 function fillColourPalette(){
   console.log(document.querySelector("#fillColourPalette").value)

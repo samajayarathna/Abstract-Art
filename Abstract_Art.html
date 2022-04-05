@@ -7,22 +7,23 @@
     <link rel="stylesheet" href="abstractArtCCS.css">
     <title id="title">Abstract Art Competition</title>
 
-    <style>
-        
-        
-    </style>
 </head>
 <body>
-    <h1 >Abstract Art Competition</h1>
+    <div>
+    <h1 id ="heading" class="title">Abstract Art Competition</h1>
+        <label for="Language"> Language </label>
+        <button id="btnEnglish">English</button>
+        <button id ="btnSpanish">española</button>
+    </div>
+
+    <div>
+        <h2 id="heading2">Instructions</h2>
+        <p id="instructions"> Draw your art by choosing shapes, colours and measurements. <br> Save the Art to your computer. <br> Submit your Art. </p>
+    </div>
     <div class="row">
         <div class="column" >
-          <div>
-            <label for="Language"> Language </label>
-            <button id="btnEnglish">English</button>
-            <button id ="btnSpanish">Spanish</button>
-          </div>
 
-          <div>
+          <div >
             <label for="Shapes">Choose a shape:</label>
             <select name="shapes" id="shapes">
               <option value="square">square</option>
@@ -110,18 +111,13 @@
         </div>
 
         <div class="column">
-            <div id="instructions">
-                <p>
-                Instructions <br>
-                 1. Draw your art by choosing shapes, colours and measurements. <br>
-                    2. Save the Art to your computer. <br> 3. Submit your Art.
-                </p> 
-                <canvas id="myCanvas" width="400" height="400" style="border:2px solid #202020; background-color: white;" ></canvas>
+            
+            <div>
+                <canvas id="myCanvas" width="400" height="400" style="border:2px solid #0a0a0a; background-color: white;" ></canvas>
                 <a id="download" download="myAbstractArt.jpg" href="" onclick="download_img(this);"> Save Art </a>
             </div>
           
         </div>
-
 
         <div class="column">
 
