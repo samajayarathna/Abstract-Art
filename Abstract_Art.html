@@ -121,7 +121,7 @@
 
         <div class="column">
 
-          <form id="fs-frm" name="file-upload-form" accept-charset="utf-8" action="/test.php" method="post" enctype="multipart/form-data">
+          <form id="fs-frm" name="file-upload-form" onsubmit="submitAlert()" accept-charset="utf-8" action="/test.php" method="post" enctype="multipart/form-data">
     
             <label for="userName">Username</label><br>
             <input type="text" name="userName" id="userName" required><br>
@@ -130,6 +130,7 @@
             <input type="email" name="email" id="email-address" placeholder="email@email.com" required ><br><br>
           
             <label for="pwd">Password:</label><br>
+            <label>Password should have minimum 8 characters</label><br>
             <input type="password" id="pwd" name="pwd" required ><br>
           
             <label for="pwd">Confirm Password:</label><br>

@@ -19,6 +19,7 @@ document.querySelector("#linearFill").addEventListener("click", myFill);
 //document.querySelector("#download").addEventListener("click", downloadImage(el))
 document.querySelector("#btnSpanish").addEventListener("click", translateToSpanish)
 document.querySelector("#btnEnglish").addEventListener("click", translateToEnglish);
+document.querySelector("#cnfpwd").addEventListener("change", validatePassword);
 
 /*document.getElementById("btnSpanish").addEventListener("click", function() {
     changeLanguage();
@@ -64,12 +65,14 @@ function draw(){
 
 function translateToSpanish(){
     document.getElementById("heading").innerHTML = "concurso de arte abstracto";
+    document.getElementById("heading").style.color = "Purple";
     document.getElementById("heading2").innerHTML = "Instrucciones";
     document.getElementById("instructions").innerHTML = "Dibuja tu arte eligiendo formas, colores y medidas.Guarde el arte en su computadora.Envía tu Arte.";
 }
 
 function translateToEnglish(){
     document.getElementById("heading").innerHTML = "Abstract Art Competition";
+    document.getElementById("heading").style.color = "Blue";
     document.getElementById("heading2").innerHTML = "Instructions";
     document.getElementById("instructions").innerHTML = "Draw your art by choosing shapes, colours and measurements.Save the Art to your computer. Submit your Art.";
 }
@@ -131,4 +134,18 @@ function myFill(){
   console.log(document.querySelector("#linearFill").checked)
 }
 
+function validatePassword(){
+    if(document.querySelector("#pwd").value != document.querySelector("#cnfpwd").value) {
+        document.querySelector("#cnfpwd").setCustomValidity("Passwords Don't Match");
+        document.querySelector("#cnfpwd").reportValidity();
+        document.querySelector("#pwd").value ='';
+        document.querySelector("#cnfpwd").value ='';
+}
+else {
+    document.querySelector("#cnfpwd").setCustomValidity('');
+    document.querySelector("#cnfpwd").reportValidity();
+}}
 
+function submitAlert(){
+    alert("The form was submitted");
+}
