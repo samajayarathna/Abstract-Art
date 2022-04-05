@@ -16,3 +16,32 @@
     display: table;
     clear: both;
   }
+
+  body {
+    width: 100%; 
+    background-color: rgb(217, 220, 240);
+  }
+  
+  h1 {
+    color: rgb(43, 117, 139); 
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+  }
+  
+  div {
+    background-color:  rgb(217, 220, 240);
+    font-family: verdana;
+    font-size: 15px;
+  }
+
+  p {
+    font-family: verdana;
+    font-size: 15px;
+  }
+
+  canvas {
+    width: "400";
+    height: "400";
+    border:2px solid #202020; 
+    background-color: white;
+  }

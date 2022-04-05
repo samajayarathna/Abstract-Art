@@ -2,8 +2,7 @@ var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d"); 
 
 //document.querySelector("#btnEnglish").addEventListener("click", translateToEnglish)
-document.getElementById()
-document.querySelector("#btnSpanish").addEventListener("click", translateToSpanish)
+//document.querySelector("#btnSpanish").addEventListener("click", translateToSpanish)
 document.querySelector("#draw").addEventListener("click", draw);
 //document.querySelector("#download").addEventListener("click", downloadImage(el))
 document.querySelector("#clear").addEventListener("click", clearCanvas);
@@ -18,11 +17,6 @@ document.querySelector("#width").addEventListener("click", getWidthValue);
 document.querySelector("#height").addEventListener("click", getHeightValue);
 document.querySelector("#shapes").addEventListener("click", myShapes);
 document.querySelector("#linearFill").addEventListener("click", myFill);
-
-function translateToEnglish(){
-    document.getElementById("title").innerHTML = "Abstract Art Competition";
-    document.getElementById("instructions").innerHTML = "Instruction : Draw your art by choosing shapes, colours and measurements. Then Save the Art to your computer. Finally Submit your Art.""
-}
 
 function draw(){  
   let grd = ctx.createLinearGradient(100, 100, 150, 100);

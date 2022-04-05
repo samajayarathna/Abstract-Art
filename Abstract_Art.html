@@ -9,23 +9,25 @@
 
     <style>
         
-        </style>
+        
+    </style>
 </head>
-<body style="width: 100%; background-color: rgb(217, 220, 240);" >
-    <h1 style="color: rgb(43, 117, 139); font-family: Arial, Helvetica, sans-serif;">Abstract Art Competition</h1>
+<body>
+    <h1 >Abstract Art Competition</h1>
     <div class="row">
-        <div class="column" style="background-color:  rgb(217, 220, 240);">
+        <div class="column" >
           <div>
             <label for="Language"> Language </label>
             <button id="btnEnglish">English</button>
             <button id ="btnSpanish">Spanish</button>
           </div>
+
           <div>
             <label for="Shapes">Choose a shape:</label>
             <select name="shapes" id="shapes">
               <option value="square">square</option>
               <option value="circle">circle</option>
-              <option value="line">LIne</option><br>
+              <option value="line">Line</option><br>
             </select><br>
             </div>
 
@@ -107,25 +109,21 @@
             </div>
         </div>
 
-        <div class="column" style="background-color:rgb(217, 220, 240);">
+        <div class="column">
             <div id="instructions">
                 <p>
                 Instructions <br>
                  1. Draw your art by choosing shapes, colours and measurements. <br>
                     2. Save the Art to your computer. <br> 3. Submit your Art.
                 </p> 
-                <canvas id="myCanvas" width="400" height="400" style="border:1px solid #080808; background-color: white;"></canvas>
+                <canvas id="myCanvas" width="400" height="400" style="border:2px solid #202020; background-color: white;" ></canvas>
                 <a id="download" download="myAbstractArt.jpg" href="" onclick="download_img(this);"> Save Art </a>
-            </div>
-
-            <div>
-               
             </div>
           
         </div>
 
 
-        <div class="column" style="background-color:rgb(217, 220, 240);">
+        <div class="column">
 
           <form id="fs-frm" name="file-upload-form" accept-charset="utf-8" action="/test.php" method="post" enctype="multipart/form-data">
     
