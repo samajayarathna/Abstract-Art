@@ -1,6 +1,12 @@
+/**
+ * @author Sama Siriwardhanage
+ */
+
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d"); 
 
+document.querySelector("#btnSpanish").addEventListener("click", translateToSpanish);
+document.querySelector("#btnEnglish").addEventListener("click", translateToEnglish);
 document.querySelector("#draw").addEventListener("click", draw);
 document.querySelector("#clear").addEventListener("click", clearCanvas);
 document.querySelector("#fillColourPalette").addEventListener("click", fillColourPalette);
@@ -14,8 +20,7 @@ document.querySelector("#width").addEventListener("click", getWidthValue);
 document.querySelector("#height").addEventListener("click", getHeightValue);
 document.querySelector("#shapes").addEventListener("click", myShapes);
 document.querySelector("#linearFill").addEventListener("click", myFill);
-//document.querySelector("#download").addEventListener("click", downloadImage(el))
-document.querySelector("#btnSpanish").addEventListener("click", translateToSpanish)
+document.querySelector("#btnSpanish").addEventListener("click", translateToSpanish);
 document.querySelector("#btnEnglish").addEventListener("click", translateToEnglish);
 document.querySelector("#cnfpwd").addEventListener("change", validatePassword);
 
@@ -39,7 +44,7 @@ function draw(){
       ctx.fill();
   }
   //drawing a rectangle
-  else if (document.querySelector("#shapes").value == "square"){
+  else if (document.querySelector("#shapes").value == "rectangle"){
       ctx.strokeRect(document.querySelector("#x").value, document.querySelector("#y").value, document.querySelector("#width").value, document.querySelector("#height").value); 
       if(document.querySelector("#linearFill").checked == true){
         ctx.fillStyle = grd;
@@ -53,7 +58,7 @@ function draw(){
   else if (document.querySelector("#shapes").value == "line"){
     ctx.moveTo(document.querySelector("#x").value, document.querySelector("#y").value);
     ctx.lineTo(document.querySelector("#lineX").value, document.querySelector("#lineY").value);
-    ctx.fillStyle = document.querySelector("#outlineColourpalette").value;
+    ctx.strokeStyle = document.querySelector("#outlineColourPalette").value;
     ctx.stroke();
   }
 }
@@ -83,11 +88,6 @@ function clearCanvas(){
   var image = canvas.toDataURL("image/jpg");
   el.href = image;
 };
-
-/*function downloadImage(el){
-  var image = canvas.toDataURL("image/jpg");
-  el.href = image;
-} */
 
 // function to get selected color from the fill color palette
 function fillColourPalette(){
@@ -151,8 +151,8 @@ function validatePassword(){
         document.querySelector("#cnfpwd").reportValidity();
         document.querySelector("#pwd").value ='';
         document.querySelector("#cnfpwd").value ='';
-}
-else {
+      }
+      else {
     document.querySelector("#cnfpwd").setCustomValidity('');
     document.querySelector("#cnfpwd").reportValidity();
 }}

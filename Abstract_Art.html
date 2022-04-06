@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="abstractArtCCS.css">
     <title id="title">Abstract Art Competition</title>
-
 </head>
+
 <body>
     <div>
     <h1 id ="heading" class="title">Abstract Art Competition</h1>
@@ -26,7 +26,7 @@
           <div >
             <label for="Shapes">Choose a shape:</label>
             <select name="shapes" id="shapes">
-              <option value="square">square</option>
+              <option value="rectangle">Rectangle</option>
               <option value="circle">circle</option>
               <option value="line">Line</option><br>
             </select><br>
@@ -130,11 +130,10 @@
             <input type="email" name="email" id="email-address" placeholder="email@email.com" required ><br><br>
           
             <label for="pwd">Password:</label><br>
-            <label>minimum 8 characters</label><br>
-            <input type="password" id="pwd" name="pwd" required ><br>
-          
+            <input type="password" id="pwd" name="pwd" placeholder ="minimum 8 characters" minlength ="8" required ><br>
+            
             <label for="pwd">Confirm Password:</label><br>
-            <input type="password" id="cnfpwd" name="cnfpwd" required><br>
+            <input type="password" id="cnfpwd" name="cnfpwd"  required><br>
           
             <label for="phone">Mobile No.:</label><br>
             <input type="tel" id="phone" name="phone" size = "18" placeholder="999-999-999" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" ><br>
@@ -148,14 +147,8 @@
           </form>
         </div>
       </div>
-        <div>
-            
-        </div><br><br>
 
-        <script src = "abstractArt.js"> </script>   
-            
-       
-            
+        <script src = "abstractArt.js"> </script>         
           
 </body>
 </html>
