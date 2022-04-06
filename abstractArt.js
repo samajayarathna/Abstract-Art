@@ -12,13 +12,6 @@ document.querySelector("#clear").addEventListener("click", clearCanvas);
 document.querySelector("#fillColourPalette").addEventListener("click", fillColourPalette);
 document.querySelector("#outlineColourPalette").addEventListener("click", outlineColourPalette);
 document.querySelector("#slider").addEventListener("click", mySlider);
-document.querySelector("#x").addEventListener("click", getXValue);
-document.querySelector("#y").addEventListener("click", getYValue);
-document.querySelector("#lineX").addEventListener("click", getlineXValue);
-document.querySelector("#lineY").addEventListener("click", getlineYValue);
-document.querySelector("#width").addEventListener("click", getWidthValue);
-document.querySelector("#height").addEventListener("click", getHeightValue);
-document.querySelector("#shapes").addEventListener("click", myShapes);
 document.querySelector("#linearFill").addEventListener("click", myFill);
 document.querySelector("#btnSpanish").addEventListener("click", translateToSpanish);
 document.querySelector("#btnEnglish").addEventListener("click", translateToEnglish);
@@ -37,7 +30,6 @@ function draw(){
 
       ctx.beginPath();
       ctx.arc(document.querySelector("#x").value, document.querySelector("#y").value, document.querySelector("#slider").value, 0, 2 * Math.PI); 
-      //ctx.strokeStyle = "black";
       ctx.strokeStyle = document.querySelector("#outlineColourPalette").value;
       ctx.stroke();
       ctx.fillStyle = document.querySelector("#fillColourPalette").value; 
@@ -51,7 +43,6 @@ function draw(){
       }
       else  ctx.fillStyle = document.querySelector("#fillColourPalette").value; 
       ctx.strokeStyle = document.querySelector("#outlineColourPalette").value;
-      ctx.stroke();
       ctx.fillRect(document.querySelector("#x").value, document.querySelector("#y").value, document.querySelector("#width").value, document.querySelector("#height").value);   
   }
   //drawing a line
@@ -84,7 +75,7 @@ function clearCanvas(){
 }
 
 // function to download canvas image
- download_img = function(el) {
+ download_img = function() {
   var image = canvas.toDataURL("image/jpg");
   el.href = image;
 };
